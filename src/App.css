@@ -51,7 +51,7 @@ div.list {
   border-radius: 5px;
   border: 1px solid #8D8D8D;
   box-shadow: 0 5px 10px 0 #2A2A2A66, inset 0 1px 3px 0 #FFFFFF80;
-  min-height: 120px;
+  min-height: 90px;
   margin: 20px;
 }
 
@@ -61,7 +61,7 @@ div.list-title {
   border-bottom: 1px solid #8D8D8D;
   box-shadow: 0 1px 3px 0 #2A2A2A66, inset 0 1px 3px 0 #FFFFFFAA;
   height: 40px;
-  margin: 0;
+  margin: 0 0 15px 0;
 }
 
 div.task {
@@ -70,8 +70,9 @@ div.task {
   border: 1px solid #8D8D8D;
   box-shadow: 0 1px 3px 0 #2A2A2A66, inset 0 1px 3px 0 #FFFFFF80;
   min-height: 50px;
-  margin: 20px;
+  margin: 20px 20px 15px 20px;
   text-align: right;
+  cursor: grab;
 }
 
 button.add-task-button {
@@ -80,16 +81,15 @@ button.add-task-button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 500;
-  padding: 10px 15px;
+  padding: 0px 15px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.30);
   background-image: linear-gradient(-180deg, #1EB52A 0%, #0D941C 100%);
   border: 1px solid #0C6B16;
   box-shadow: 0 1px 5px 0 #09741580, inset 0 1px 0 0 #FFFFFF80, inset 0 2px 4px 0 #FFFFFF80;
-  height: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  height: 25px;
+  margin-bottom: 15px;
 }
 
 button.delete-task-button {

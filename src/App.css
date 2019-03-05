@@ -35,7 +35,7 @@ p {
   font-weight: normal;
   text-align: left;
   color: #444444;
-  margin: 20px 5% 20px 5%;
+  margin: 20px 5% 0px 5%;
   width: 90%;
 }
 
@@ -64,6 +64,16 @@ div.list-title {
   margin: 0;
 }
 
+div.task {
+  background-image: linear-gradient(0deg, #BBC6CD 3%, #E2EBF0 100%);
+  border-radius: 5px;
+  border: 1px solid #8D8D8D;
+  box-shadow: 0 1px 3px 0 #2A2A2A66, inset 0 1px 3px 0 #FFFFFF80;
+  min-height: 50px;
+  margin: 20px;
+  text-align: right;
+}
+
 button.add-task-button {
   appearance: none;
   border-radius: 5px;
@@ -76,17 +86,25 @@ button.add-task-button {
   text-shadow: 0 2px 4px rgba(0,0,0,0.30);
   background-image: linear-gradient(-180deg, #1EB52A 0%, #0D941C 100%);
   border: 1px solid #0C6B16;
-  box-shadow: 0 1px 5px 0 rgba(9,116,21,0.50), inset 0 1px 0 0 rgba(255,255,255,0.50), inset 0 2px 4px 0 rgba(255,255,255,0.50);
+  box-shadow: 0 1px 5px 0 #09741580, inset 0 1px 0 0 #FFFFFF80, inset 0 2px 4px 0 #FFFFFF80;
   height: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-div.task {
-  background-image: linear-gradient(0deg, #BBC6CD 3%, #E2EBF0 100%);
+button.delete-task-button {
+  appearance: none;
   border-radius: 5px;
-  border: 1px solid #8D8D8D;
-  box-shadow: 0 1px 3px 0 #2A2A2A66, inset 0 1px 3px 0 #FFFFFF80;
-  min-height: 50px;
-  margin: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 0 10px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.30);
+  background-image: linear-gradient(-180deg, #B51F1F 0%, #940D0D 100%);
+  border: 1px solid #6B0C0C;
+  box-shadow: 0 1px 5px 0 #73090980, inset 0 1px 0 0 #FFFFFF80, inset 0 2px 4px 0 #FFFFFF80;
+  height: 25px;
+  margin: 15px;
 }

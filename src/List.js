@@ -12,9 +12,13 @@ export default class List extends React.Component {
     this.setState((prevState) => ({ tasks: prevState.tasks.concat(newTask) }));
   }
 
+  deleteTask = (taskId) => {
+    this.setState((prevState) => ({ tasks: prevState.tasks.filter(task => task.key !== taskId) }));
+  }
+
   getNewTask = ({text, key}) => {
     return (
-      <Task key={key} text={text} />
+      <Task key={key} id={key} text={text} deleteTask={this.deleteTask} />
     );
   }
 
@@ -23,9 +27,7 @@ export default class List extends React.Component {
       gridColumn: this.props.line
     };
 
-    console.log(this.state.tasks);
     const taskList = this.state.tasks.map(this.getNewTask);
-    console.log(taskList);
 
     return (
       <div className="list" style={listStyle}>

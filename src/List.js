@@ -8,7 +8,7 @@ export default class List extends React.Component {
   }
   
   onAddTaskClick = () => {
-    const newTask = { key: Date.now(), text: prompt('New Task') };
+    const newTask = { key: Date.now(), title: prompt('New Task Title'), text: prompt('New Task Description') };
     this.setState((prevState) => ({ tasks: prevState.tasks.concat(newTask) }));
   }
 
@@ -22,15 +22,16 @@ export default class List extends React.Component {
 
   onDrop = (e) => {
     const id = Number(e.dataTransfer.getData('id'));
+    const title = e.dataTransfer.getData('title');
     const text = e.dataTransfer.getData('text');
     this.props.deleteTaskGlobally(id);
-    const newTask = { key: id, text: text };
+    const newTask = { key: id, title: title, text: text };
     this.setState((prevState) => ({ tasks: prevState.tasks.concat(newTask) }));
   }
 
-  getNewTask = ({text, key}) => {
+  getNewTask = ({key, title, text}) => {
     return (
-      <Task key={key} id={key} text={text} deleteTask={this.deleteTask} />
+      <Task key={key} id={key} text={text} title={title} deleteTask={this.deleteTask} />
     );
   }
 

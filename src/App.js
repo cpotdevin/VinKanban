@@ -10,9 +10,9 @@ export default class App extends React.Component {
           <h1>vinKanban</h1>
         </div>
         <div className="lists">
-          <List line={1} title={'To Do'} />
-          <List line={2} title={'Doing'} />
-          <List line={3} title={'Done'} />
+          <List line={1} title="To Do" />
+          <List line={2} title="Doing" />
+          <List line={3} title="Done" />
         </div>
       </div>
     );
